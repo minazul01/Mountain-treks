@@ -13,10 +13,11 @@ import ErrorPage from "./ErrorPage/ErrorPage";
       path: "/",
       element: <MainLayout></MainLayout>,
         errorElement: <ErrorPage></ErrorPage>,
+        loader: () => fetch("/FakeData.json"),
          children: [
           {
             path: "/",
-            element: <Home></Home>
+            element: <Home></Home>,
           },
           {
             path: "/updateprofile",
