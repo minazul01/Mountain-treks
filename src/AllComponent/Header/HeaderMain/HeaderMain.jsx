@@ -33,7 +33,7 @@ export default function HeaderMain() {
                 navigation={true}
                 thumbs={{ swiper: thumbsSwiper }}
                 modules={[FreeMode, Navigation, Thumbs]}
-                className="mySwiper2 border-2 max-w-[450px] md:max-w-[1450px] h-[300px] md:h-[500px] rounded-lg"
+                className="mySwiper2 max-w-[450px] md:max-w-[1450px] h-[300px] md:h-[500px] rounded-lg"
             >
                 <div>
                     {
@@ -62,31 +62,31 @@ export default function HeaderMain() {
             >
                 
                 <SwiperSlide>
-                    <img className='w-[300px] h-[150px] md:h-[350px]' src={data[0].image} />
+                    <img className='w-[350px] h-[50px] md:h-[100px]' src={data[0].image} />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img className='w-[300px] h-[150px] md:h-[350px]' src={data[1].image} />
+                <img className='w-[350px] h-[50px] md:h-[100px]' src={data[1].image} />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img className='w-[300px] h-[150px] md:h-[350px]' src={data[2].image} />
+                <img className='w-[350px] h-[50px] md:h-[100px]' src={data[2].image} />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img className='w-[300px] h-[150px] md:h-[350px]' src={data[3].image} />
+                <img className='w-[350px] h-[50px] md:h-[100px]' src={data[3].image} />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img className='w-[300px] h-[150px] md:h-[350px]' src={data[4].image} />
+                <img className='w-[350px] h-[50px] md:h-[100px]' src={data[4].image} />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img className='w-[300px] h-[150px] md:h-[350px]' src={data[5].image} />
+                <img className='w-[350px] h-[50px] md:h-[100px]' src={data[5].image} />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img className='w-[300px] h-[150px] md:h-[350px]' src={data[6].image} />
+                <img className='w-[350px] h-[50px] md:h-[100px]' src={data[6].image} />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className='w-[300px] h-[150px] md:h-[350px]' src={data[7].image} />
+                    <img className='w-[350px] h-[50px] md:h-[100px]' src={data[7].image} />
                 </SwiperSlide>
                 <SwiperSlide>
-                <img className='w-[300px] h-[200px] md:h-[350]' src={data[8].image} />
+                <img className='w-[350px] h-[50px] md:h-[100px]' src={data[8].image} />
                 </SwiperSlide>
             </Swiper>
         </>

@@ -2,9 +2,13 @@ import {
     createBrowserRouter } from "react-router-dom";
 import MainLayout from "./MainLayout/MainLayout";
 import Home from "./Main/Home";
-import UpdateProfile from "./Main/UpdateProfile";
+
 import UserProfile from "./Main/UserProfile";
 import ErrorPage from "./ErrorPage/ErrorPage";
+import AllTrip from "./Main/AllTrip";
+import Detail from "./Main/Details/Detail";
+import Experience from "./Main/Experience/Experience";
+import Contact from "./Main/Contact";
 
 
 
@@ -12,7 +16,7 @@ import ErrorPage from "./ErrorPage/ErrorPage";
     {
       path: "/",
       element: <MainLayout></MainLayout>,
-        errorElement: <ErrorPage></ErrorPage>,
+        // errorElement: <ErrorPage></ErrorPage>,
         loader: () => fetch("/FakeData.json"),
          children: [
           {
@@ -20,13 +24,34 @@ import ErrorPage from "./ErrorPage/ErrorPage";
             element: <Home></Home>,
           },
           {
-            path: "/updateprofile",
-            element: <UpdateProfile></UpdateProfile>
+            path: "/alltrip",
+            element: <AllTrip></AllTrip>,
+            loader: () => fetch("/FakeData.json"),
           },
           {
             path: "/userprofile",
             element: <UserProfile></UserProfile>
-          }
+          },
+          {
+            path: "/experience",
+            element: <Experience></Experience>
+          },
+          {
+            path: "/detail/:id",
+            element: <Detail></Detail>,
+            loader: async ({params}) => {
+              const res = await fetch("/FakeData.json")
+              const data = await res.json()
+             
+              const singleData = data.find(d => d.id === params.id)
+           
+              return singleData;
+            }
+          },
+         {
+          path: "/contact",
+          element: <Contact></Contact>
+         },
           
          ]
     },
