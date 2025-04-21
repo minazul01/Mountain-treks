@@ -9,6 +9,8 @@ import AllTrip from "./Main/AllTrip";
 import Detail from "./Main/Details/Detail";
 import Experience from "./Main/Experience/Experience";
 import Contact from "./Main/Contact";
+import Login from "./Authentication/Login";
+import Register from "./Authentication/Register";
 
 
 
@@ -52,6 +54,14 @@ import Contact from "./Main/Contact";
           path: "/contact",
           element: <Contact></Contact>
          },
+         {
+          path: "/login",
+          element: <Login></Login>
+         },
+         {
+          path: "/register",
+          element: <Register></Register>
+         }
           
          ]
     },

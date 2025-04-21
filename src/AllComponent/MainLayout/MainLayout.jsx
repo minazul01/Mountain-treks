@@ -4,9 +4,13 @@ import Navbar from '../Header/Navbar/Navbar';
 import Footer from '../Footer/Footer';
 
 
+
 export const context = createContext();
 const MainLayout = () => {
     const data = useLoaderData();
+
+
+
     return (
         <>
             <div className='max-w-7xl mx-auto'>

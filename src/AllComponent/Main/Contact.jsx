@@ -4,8 +4,8 @@ const Contact = () => {
     return (
         <div>
             <div className="hero bg-base-200 min-h-screen">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card bg-base-100 w-full max-w-[1450px] shrink-0 shadow-2xl">
+                <div className="">
+                    <div className=" bg-base-100 w-full max-w-[1450px] shrink-0 shadow-2xl">
                         <div className="card-body">
                             <fieldset className="fieldset w-fit md:w-[400px] h-fit md:h-[300px] flex-col items-center justify-center">
                                 <label className="label">Name</label>

@@ -1,8 +1,12 @@
-import React from 'react';
+
 import { NavLink } from 'react-router-dom';
 import Logo from "../../../assets/websitelogo.jpg/"
 
+
+
+
 const Navbar = () => {
+   
     return (
         <div className="navbar bg-gray-100 rounded-2xl my-5 p-5 text-black shadow-sm">
             <div className="navbar-start">
@@ -31,7 +35,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end text-xl font-medium">
-            <a className="btn">Login</a>
+            <NavLink to="/login" className='btn'>Login</NavLink>
             </div>
         </div>
     );

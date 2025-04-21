@@ -11,7 +11,7 @@ const Home = () => {
   
 
     const jsonData = useContext(context);
-    const data = jsonData.data
+    const data = jsonData.data;
     return (
         <div>
             <HeaderMain></HeaderMain>
