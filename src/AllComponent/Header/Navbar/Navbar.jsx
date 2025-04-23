@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../../../assets/websitelogo.jpg/";
 import { useContext } from "react";
 import { MyContext } from "../../Authentication/AuthenticationProvider";
@@ -53,11 +53,24 @@ const Navbar = () => {
       <div className="navbar-end text-xl font-medium">
         {user?.email ? (
           <div className="flex items-center gap-2">
-            <img className="w-10 md:w-20 rounded-full cursor-grab" src={user.photoURL} alt="" />
-            <button className="p-2 bg-lime-400 rounded-md cursor-pointer" onClick={handleLogout}>Logout</button>
+            <img
+              className="w-10 md:w-20 rounded-full cursor-grab"
+              src={user.photoURL}
+              alt=""
+            />
+            <button
+              className="p-2 bg-lime-400 rounded-md cursor-pointer"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
           </div>
         ) : (
-          <button>Login</button>
+          <Link to="/login">
+            <button className="p-2 rounded-md bg-lime-300 cursor-pointer">
+              Login
+            </button>
+          </Link>
         )}
       </div>
     </div>

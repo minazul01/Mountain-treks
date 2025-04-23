@@ -39,7 +39,7 @@ const AuthenticationProvider = ({routes}) => {
     useEffect(() =>{
         const unscribe = onAuthStateChanged(auth, (currenUser) => {
           
-            console.log(currenUser)
+            
             if(currenUser){
                 setUser(currenUser)
             }else{

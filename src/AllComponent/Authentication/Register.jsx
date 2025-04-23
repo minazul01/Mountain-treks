@@ -51,7 +51,7 @@ const Register = () => {
 
     // If all valid
     toast.success("Congratulation! You are Registering...");
-    console.log(userName, email, password, conPassword);
+    
     handleRegister(email, password)
     .then(() => {
       updatePro(userName, image)
