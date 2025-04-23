@@ -5,7 +5,7 @@ const Contact = () => {
         <div>
             <div className="hero bg-base-200 min-h-screen">
                 <div className="">
-                    <div className=" bg-base-100 w-full max-w-[1450px] shrink-0 shadow-2xl">
+                    <div className=" bg-base-100 w-full max-w-[1450px] rounded-2xl shrink-0 shadow-2xl">
                         <div className="card-body">
                             <fieldset className="fieldset w-fit md:w-[400px] h-fit md:h-[300px] flex-col items-center justify-center">
                                 <label className="label">Name</label>

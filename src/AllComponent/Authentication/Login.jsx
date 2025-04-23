@@ -6,7 +6,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
-  const { handleGoogleLogin, handleLogin, handleLogout } =
+  const { handleGoogleLogin, handleLogin } =
     useContext(MyContext);
 
     const location = useLocation();
@@ -102,7 +102,6 @@ const Login = () => {
                   </span>
                   <span className="cursor-pointer">Login with google</span>
                 </button>
-                <button onClick={handleLogout}>Logout</button>
               </div>
             </fieldset>
           </div>
