@@ -8,6 +8,7 @@ import { FaYoutube } from "react-icons/fa";
 import { SlArrowUp } from "react-icons/sl";
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
   return (
     <footer className="bg-white shadow-md rounded-xl w-full p-3 md:p-4 relative">

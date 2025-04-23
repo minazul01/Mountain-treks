@@ -5,10 +5,15 @@ import { IoWomanSharp } from "react-icons/io5";
 import { RiRemoteControl2Fill } from "react-icons/ri";
 import { IoCarSport } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
+import { Helmet } from "react-helmet";
+
 
 const Experience = () => {
     return (
         <div>
+           <Helmet>
+            <title>Experience-page!</title>
+           </Helmet>
             <div className="card card-side bg-base-100 shadow-sm flex-col lg:flex-row my-10 py-5 gap-5">
                 <figure className="w-fit lg:w-1/2 p-2 rounded-lg mx-auto">
                     <img className="h-fit lg:h-[600px]"

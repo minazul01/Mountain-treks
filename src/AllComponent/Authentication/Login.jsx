@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MyContext } from "./AuthenticationProvider";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const { handleGoogleLogin, handleLogin } =
@@ -51,6 +52,9 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Login-page!</title>
+      </Helmet>
       <form action="" onSubmit={handleLoging}>
         <h1 className="text-3xl font-bold text-center my-10">Please Login!</h1>
         <div className="w-full flex justify-center my-16">

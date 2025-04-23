@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { MyContext } from "./AuthenticationProvider";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { handleGoogleLogin, handleRegister, updatePro } = useContext(MyContext);
@@ -60,6 +61,9 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Register-page!</title>
+      </Helmet>
       <form action="" onSubmit={handleClick}>
         <h1 className="text-4xl font-bold text-center my-10">
           Please Registe Now!

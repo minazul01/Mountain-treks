@@ -2,7 +2,7 @@
 
 import AllTripCard from './AllTripCard';
 import { useLoaderData } from 'react-router-dom';
-import PopularCard from './PopularCard';
+
 
 const AllTrip = () => {
 
@@ -12,7 +12,7 @@ const AllTrip = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10'>
             {
-                data.map((data, index) => <div><AllTripCard key={index} data={data}></AllTripCard></div>)
+                data.map((data) => <div key={data.id}><AllTripCard data={data}></AllTripCard></div>)
             }
         </div>
     )

@@ -38,9 +38,12 @@ const Navbar = () => {
           </ul>
         </div>
         <img className="bg-gray-100 hidden md:block" src={Logo} alt="" />
-        <a className="text-base md:text-2xl font-normal md:font-bold">
-          Mountain Treks
-        </a>
+        <Link
+          className="text-base md:text-2xl font-normal md:font-bold cursor-pointer"
+          to="/"
+        >
+          Mountain treks
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-5 text-base font-medium">

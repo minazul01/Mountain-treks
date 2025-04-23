@@ -1,10 +1,14 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link, useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
     const error = useRouteError();
     return (
         <div className='flex flex-col items-center justify-center my-20'>
+            <Helmet>
+                <title>Error-page!</title>
+            </Helmet>
             <h1 className='text-2xl font-bold'>Unexpected Application Error!</h1>
             <h2 className='text-xl font-medium'>404 Not Found</h2>
             {error && <p className='text-xs mx-5 font-medium'>{error.error.stack}</p>}

@@ -13,6 +13,7 @@ const PopularCard = ({ data }) => {
 
     return (
         <div>
+            
             <div className='max-w-[800px] relative'>
                 <img className='w-[400px] h-[300px] md:w-[700px] md:h-[400px] mx-auto rounded-lg' src={image} alt={categoryName} />
                 <div className='absolute bottom-2 left-5 md:bottom-6 md:left-5 space-y-1'>

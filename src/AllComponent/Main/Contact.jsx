@@ -8,6 +8,7 @@ import { BsLinkedin, BsTwitter } from "react-icons/bs";
 import { FaYoutube } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet";
 
 const ContactForm = () => {
   const handleSent = (e) => {
@@ -23,6 +24,9 @@ const ContactForm = () => {
   };
   return (
     <section className="w-full grid grid-cols-1 md:grid-cols-2 gap-[35px] boxShadow p-[30px] rounded-xl my-10">
+      <Helmet>
+        <title>Contact-page!</title>
+      </Helmet>
       {/*  informations  */}
       <aside className="w-full bg-gray-800 flex flex-col justify-between p-[25px] rounded-md">
         <div>

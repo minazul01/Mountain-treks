@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { ImCross } from "react-icons/im";
 
+
 const Detail = () => {
   // eslint-disable-next-line no-unused-vars
   const [showModal, setShowModal] = useState(false);
@@ -37,6 +38,7 @@ const Detail = () => {
 
   return (
     <>
+  
       <div
         className={`${
           isModalOpen ? " scale-[1] opacity-100" : " scale-[0] opacity-0"

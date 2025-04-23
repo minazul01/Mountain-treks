@@ -14,6 +14,7 @@ import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { context } from '../../MainLayout/MainLayout';
 
+
 export default function HeaderMain() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
@@ -23,6 +24,7 @@ export default function HeaderMain() {
   
     return (
         <>
+        
             <Swiper
                 style={{
                     '--swiper-navigation-color': '#fff',

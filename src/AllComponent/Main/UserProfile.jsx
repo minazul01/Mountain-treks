@@ -1,11 +1,15 @@
 import { useContext } from "react";
 import { MyContext } from "../Authentication/AuthenticationProvider";
+import { Helmet } from "react-helmet";
 
 const UserProfile = () => {
   const { user } = useContext(MyContext);
 
   return (
     <div className="text-center p-4 my-10">
+      <Helmet>
+        <title>User-Profile-page!</title>
+      </Helmet>
       {user ? (
         <div>
           <div className="w-full flex justify-center items-center my-4"><img src={user.photoURL} alt="User" className="w-24 rounded-full" /></div>
