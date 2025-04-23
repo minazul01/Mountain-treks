@@ -1,21 +1,24 @@
 /* eslint-disable no-unused-vars */
 import React, { createContext, useEffect, useState } from 'react';
-import {  createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import {createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile,} from "firebase/auth";
 import auth from '../Utilis/Utilis';
 
 export const MyContext = createContext();
 const AuthenticationProvider = ({routes}) => {
     // google authProvider create
     const googleProvider = new GoogleAuthProvider;
-
+    // firebase state
     const [user, setUser] = useState(null);
 
+    // private router intial state
+    const [loading, setLoading] = useState(true);
     // signIn, signUp, Logout
     const handleRegister = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
+       return createUserWithEmailAndPassword(auth, email, password)
+        
     }
     const handleLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
+       return signInWithEmailAndPassword(auth, email, password)
     };
       
     const handleLogout = () => {
@@ -24,17 +27,31 @@ const AuthenticationProvider = ({routes}) => {
 
     // google signUp, signIn Logout
     const handleGoogleLogin = () => {
-        signInWithPopup(auth, googleProvider)
+       return signInWithPopup(auth, googleProvider)
     };
+    // update procile
+    const updatePro = (userName, image) =>{
+        updateProfile(auth.currentUser, {
+            displayName: userName, photoURL:image
+        })
+    }
 
     useEffect(() =>{
         const unscribe = onAuthStateChanged(auth, (currenUser) => {
           
             console.log(currenUser)
+            if(currenUser){
+                setUser(currenUser)
+            }else{
+                setUser(null)
+            }
+
+            setLoading(false)
 
             return () => {
                 unscribe();
             }
+
 
         })
     }, []);
@@ -45,6 +62,10 @@ const AuthenticationProvider = ({routes}) => {
         handleLogin,
         handleLogout,
         handleGoogleLogin,
+        updatePro,
+        user,
+        setUser,
+        loading
     }
  
     return (
